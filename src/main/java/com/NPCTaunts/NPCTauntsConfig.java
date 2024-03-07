@@ -1,4 +1,4 @@
-package com.example;
+package com.NPCTaunts;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
