@@ -228,7 +228,7 @@ public class NPCTauntsPlugin extends Plugin
 				final int GauntletMaze = client.getVarbitValue(9178);
 				if (GauntletMaze == 1)
 				{
-					if (Gauntletminions.contains(Killer))
+					if (Gauntletminions.contains(Killer.getName()))
 					{
 						prehunleffminion = true;
 						return;
@@ -280,7 +280,7 @@ public class NPCTauntsPlugin extends Plugin
 			return;
 		}
 		if (Recentlycommented.contains(event.getNpc().getName())) { return;}
-		String taunt = "";
+		String taunt;
 		if (finaldamagetaken == 69)
 		{
 			if ( r.nextInt(100)>50){
