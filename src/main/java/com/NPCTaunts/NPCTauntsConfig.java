@@ -15,6 +15,6 @@ public interface NPCTauntsConfig extends Config
 	)
 	default int ForgetTimeDelay()
 	{
-		return 30;
+		return 10;
 	}
 }
