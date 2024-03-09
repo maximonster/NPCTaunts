@@ -70,7 +70,7 @@ public class NPCTauntsPlugin extends Plugin
 	private final List<String> SquirePhrases = Arrays.asList("Why do you even respawn here?","You know all the knights make fun of you right?");
 	private final List<String> FeroxPhrases = Arrays.asList("I see {Playername} got PKed","Death is inevitable around here","This isn't good for your KD");
 	private final List<String> WedgePhrases = Arrays.asList("We're gonna be winning, and frankly, we're gonna be tired of winning.","When you get killed they let you do anything. Grab 'em by the hellcat.","Despite all the negative deaths, covfefe","If {Enemyname} weren't my daughter I'd be dating her","{Playername} is gonna build a wall, and make {Enemyname} pay for it.");
-	private final List<String> ElisePhrases = Arrays.asList("Are you a Zeah locked ironman or something?","Luckily the arceuus mages managed to revive you");
+	private final List<String> ElisePhrases = Arrays.asList("Dying is not the vibe, STOP!!!!!!!!!","You loser, RAT!!!");
 	private final List<String> TowncrierPhrases = Arrays.asList("Hear ye, hear ye {Playername} has died to a {Enemyname}!","Listen all a {Enemyname} got the better of {Playername}");
 	private final List<String> PreJadPhrases = Arrays.asList("JalYts! JalYt {Playername} failed the fight caves!","JalYt {Playername} died fighting {Enemyname}!");
 	private final List<String> JadPhrases = Arrays.asList("JalYt {Playername} thought they could take a hit from TzTok-Jad","JalYt {Playername} thought they could outdamage Yt-HurKot","Can someone clean up JalYt {Playername}'s remains? TzTok-Jad made a mess again");
