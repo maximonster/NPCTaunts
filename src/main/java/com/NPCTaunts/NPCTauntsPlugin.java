@@ -142,16 +142,22 @@ private int Modifierselected =-1;
 	private String Phrase(List<String> p)
 	{
 		int rand = r.nextInt(p.size());
-		while (p.get(rand).contains("{Enemyname}") && Killer == null)
+		int b =0;
+		while (p.get(rand).contains("{Enemyname}") && Killer == null && b<20)
 		{
 			rand = r.nextInt(p.size());
+			b++;
 		}
 		String s = p.get(rand);
-		if (s.contains("{Enemyname}"))
-		{
-			String killername = Killer;
-			s = s.replace("{Enemyname}", killername);
-			log.debug(killername+" was recorded as killer name");
+		if (s.contains("{Enemyname}")) {
+			if (b < 20) {
+				String killername = Killer;
+				s = s.replace("{Enemyname}", killername);
+				log.debug(killername + " was recorded as killer name");
+			} else {
+				s = s.replace("{Enemyname}", "that last foe");
+
+			}
 		}
 		if (s.contains("{Playername}"))
 		{
