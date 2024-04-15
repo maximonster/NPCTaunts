@@ -358,7 +358,7 @@ private int Modifierselected =-1;
 				}
 				if (regionId == COLOSSEUM_REGION)
 				{
-					if (Sol)
+					if (wave == 12)
 					{
 						soldeath = true;
 					}
@@ -415,10 +415,6 @@ private int Modifierselected =-1;
 		if (event.getNpc().getName().equals("TzKal-Zuk"))
 		{
 			Zuk = true;
-		}
-		if (event.getNpc().getName().equals("Sol Heredit"))
-		{
-			Sol = true;
 		}
 
 		if (event.getNpc().getName().equals("Great Olm"))
