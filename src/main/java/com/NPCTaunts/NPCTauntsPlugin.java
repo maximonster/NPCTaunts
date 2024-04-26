@@ -19,7 +19,6 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.util.Text;
 
-
 @Slf4j
 @PluginDescriptor(
 		name = "NPCTaunts"
@@ -64,36 +63,6 @@ public class NPCTauntsPlugin extends Plugin
 	private boolean prehunleffdeath;
 	private boolean hunleffdeath;
 	private boolean chambersdeath;
-
-
-	private final List<String> HansPhrases = Arrays.asList("You'll get them next time Tiger!","I've seen everyone end up here again, so don't worry","Get back on that unicorn and show them!","Unlucky!","They got lucky","It's okay {Playername}. I'm here for you");
-	private final List<String> HaitusPhrases = Arrays.asList("RIP Bozo","Sit idiot","Get some better gear maybe you'll live longer","Obtain good pleb","Just buy your cape like I did","Im living in your game rent free","AH! You're just fresh out of tutorial island","Been caught lackin","Dying is not very stylish is it?","Pauper Poor Primitive Peasant","Good thing they don't measure fashionscape skill levels for you","If only your list of deaths was a small as your staff","Buy an adamant longer sword, yours is too short","I fart in your general direction","If only your staff was as mighty as mine","{Playername} sucks at staying alive!");
-	private final List<String> KhaledPhrases = Arrays.asList("I call her chandelier","Let's go golfing","Call me a tennis ball.","We ain't stoppin, let's go shoppin.","That's when you know you're the greatest: when you're the greatest, and people still put odds against you." , "I tell myself every day I love my Jacuzzi, I love my marble floors, I love my high ceilings");
-	private final List<String> PriffPhrases = Arrays.asList("Do all humans die this much?","I think that one is special","All that foreign armor doesn't seem to protect them");
-	private final List<String> BankerPhrases = Arrays.asList("Losing the hardcore status: completed","Please stop dying, your bank value can't handle it","Can you ask Death to give us a commission?","Your bank is full of food! Use it!","Next time if you don't respawn on time your bank will be forclosed");
-	private final List<String> SquirePhrases = Arrays.asList("Why do you even respawn here?","You know all the knights make fun of you right?");
-	private final List<String> FeroxPhrases = Arrays.asList("I see {Playername} got PKed","Death is inevitable around here","This isn't good for your KD");
-	private final List<String> WedgePhrases = Arrays.asList("We're gonna be winning, and frankly, we're gonna be tired of winning.","When you get killed they let you do anything. Grab 'em by the hellcat.","Despite all the negative deaths, covfefe","If {Enemyname} weren't my daughter I'd be dating her","{Playername} is gonna build a wall, and make {Enemyname} pay for it.");
-	private final List<String> ElisePhrases = Arrays.asList("Dying is not the vibe, STOP!!!!!!!!!","You loser, RAT!!!");
-	private final List<String> TowncrierPhrases = Arrays.asList("Hear ye, hear ye {Playername} has died to a {Enemyname}!","Listen all a {Enemyname} got the better of {Playername}");
-	private final List<String> PreJadPhrases = Arrays.asList("JalYts! JalYt {Playername} failed the fight caves!","JalYt {Playername} died fighting {Enemyname}!");
-	private final List<String> JadPhrases = Arrays.asList("JalYt {Playername} thought they could take a hit from TzTok-Jad","JalYt {Playername} thought they could outdamage Yt-HurKot","Can someone clean up JalYt {Playername}'s remains? TzTok-Jad made a mess again");
-	private final List<String> PreZukPhrases = Arrays.asList("JalYt {Playername} should avoid taking hits from Jal-Xil's heavy boulders","JalYt {Playername} should avoid taking hits from Jal-Zek's powerful magical abilities","JalYt {Playername} should avoid chasing Jal-Nib","JalYt {Playername} has succumbed to the inferno","Cmon man its easier than the colloseum");
-	private final List<String> ZukPhrases = Arrays.asList("TzKal-Zuk is unbeatable","Was it worth your fire cape?","JalYt {Playername} you must stay behind the shield");
-	//If you die to a rat spider or bat
-	private final List<String> BrynrsbPhrases = Arrays.asList("You died to a {Enemyname}????","How in Seren's name did you die to a {Enemyname}?");
-	//if you die before going to hunleff
-	private final List<String> BrynphPhrases = Arrays.asList("Stay away from the corrupted gauntlet if you can't even make it to Hunleff","Have you considered doing easier content instead?");
-	//if you die during hunleff
-	private final List<String> BrynPhrases = Arrays.asList("Hey everyone {Playername} died so will get some cod!","Get stomped","Trying running away from the tornadoes","The floor really is lava","Standing still will get you nill","This one would've been the Enhanced weapon seed");
-	private final List<String> ZulPhrases = Arrays.asList("Snake?? SNAKE??? SNAAAAAAAAAAAAAAAAAAKEEE","You have blessed us with a bountiful eel harvest","Zulrah was pleased","Your sacrifice is appreciated","The sacred contract has been fullfilled once again","Zulrah dislikes the taste of your equipment");
-	private final List<String> OlmPhrases = Arrays.asList("No purple for you","If you scuff I will not provide stuff");
-	private final List<String> PreSolPhrases = Arrays.asList("A {Title} has passed away!","{Playername} made it to wave {Wave}","{Mod} was too much for you","Death smiles at us all. All a man can do is smile back","Were you not entertained?","This is FORTIS","Maybe don't select {Mod} next time","Cmon man its easier than inferno","Morituri te salutant");
-	private final List<String> SolPhrases = Arrays.asList("A {Title} was defeated by Sol Heredit!","Sol is known for twisting your knob off","People should know when they are conquered","{Mod} makes Sol stronger");
-
-	private final List<String> SixNinePhrases = Arrays.asList("hehe nice");
-	private final List<String> SevenThreePhrases = Arrays.asList("You little ginger prick","Thanks for the zerker ring man");
-	private final List<String> OnePhrases = Arrays.asList("Seriously, you died to a 1? Eat a cabbage next time, then you might survive. Yuck.","Gratz on your Nightmare Mode loss","EAT {Playername}! EAT!");
 
 	private List<Integer> Recentlycommented = new ArrayList<>();
 	private String colotitle = "";
@@ -424,7 +393,7 @@ private int Modifierselected =-1;
 		if (event.getNpc().getName().equals("Great Olm"))
 		{
 			if (chambersdeath){
-				String otaunt = Phrase(OlmPhrases);
+				String otaunt = Phrase(Arrays.asList(NPCTauntsPhrases.Olm));
 				event.getNpc().setOverheadCycle(400);
 				event.getNpc().setOverheadText(otaunt);
 			}
@@ -435,7 +404,7 @@ private int Modifierselected =-1;
 		{
 			if (event.getNpc().getName().equals("Hatius Cosaintus"))
 			{
-				String Khaledtaunt = Phrase(KhaledPhrases);
+				String Khaledtaunt = Phrase(Arrays.asList(NPCTauntsPhrases.Khaled));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(Khaledtaunt);
 			}
@@ -446,28 +415,28 @@ private int Modifierselected =-1;
 
 		if (event.getNpc().getName().equals("Hans"))
 		{
-			taunt = Phrase(HansPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Hans));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Hatius Cosaintus"))
 		{
-			taunt = Phrase(HaitusPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Haitus));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Vaire"))
 		{
-			taunt = Phrase(PriffPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Priff));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Banker"))
 		{
-			taunt = Phrase(BankerPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Banker));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			if ( r.nextInt(100)>70){
@@ -476,35 +445,35 @@ private int Modifierselected =-1;
 		}
 		if (event.getNpc().getName().equals("Squire"))
 		{
-			taunt = Phrase(SquirePhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Squire));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Ferox"))
 		{
-			taunt = Phrase(FeroxPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Ferox));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("The 'Wedge'"))
 		{
-			taunt = Phrase(WedgePhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Wedge));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Elise"))
 		{
-			taunt = Phrase(ElisePhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Elise));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Town Crier"))
 		{
-			taunt = Phrase(TowncrierPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Towncrier));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
@@ -517,11 +486,11 @@ private int Modifierselected =-1;
 		{
 			if (prejaddeath)
 			{
-				taunt = Phrase(PreJadPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.PreJad));
 			}
 			else if (jaddeath)
 			{
-				taunt = Phrase(JadPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Jad));
 			}
 			else{
 				return;
@@ -534,11 +503,11 @@ private int Modifierselected =-1;
 		{
 			if (prezukdeath)
 			{
-				taunt = Phrase(PreZukPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.PreZuk));
 			}
 			else if (zukdeath)
 			{
-				taunt = Phrase(ZukPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Zuk));
 			}
 			else{
 				return;
@@ -551,11 +520,11 @@ private int Modifierselected =-1;
 		{
 			if (presoldeath)
 			{
-				taunt = Phrase(PreSolPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.PreSol));
 			}
 			else if (soldeath)
 			{
-				taunt = Phrase(SolPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Sol));
 			}
 			else{
 				return;
@@ -569,14 +538,14 @@ private int Modifierselected =-1;
 		{
 			if (prehunleffminion)
 			{
-				taunt = Phrase(BrynrsbPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Brynrsb));
 			}
 			else if (prehunleffdeath)
 			{
-				taunt = Phrase(BrynphPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Brynph));
 			}
 			else if (hunleffdeath) {
-				taunt = Phrase(BrynPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Bryn));
 			}
 			else{
 				return;
@@ -588,7 +557,7 @@ private int Modifierselected =-1;
 		if (event.getNpc().getName().equals("Priestess Zul-Gwenwynig"))
 		{
 			if (zulrahdeath){
-			taunt = Phrase(ZulPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Zul));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
@@ -603,7 +572,7 @@ private int Modifierselected =-1;
 		if (finaldamagetaken == 69)
 		{
 			if ( r.nextInt(100)>50){
-				taunt = Phrase(SixNinePhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.SixNine));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(taunt);
 				Recentlycommented.add(event.getNpc().getId());
@@ -612,7 +581,7 @@ private int Modifierselected =-1;
 		if (finaldamagetaken ==73)
 		{
 			if ( r.nextInt(100)>70){
-				taunt = Phrase(SevenThreePhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.SevenThree));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(taunt);
 				Recentlycommented.add(event.getNpc().getId());
@@ -621,7 +590,7 @@ private int Modifierselected =-1;
 		if (finaldamagetaken ==1)
 		{
 			if ( r.nextInt(100)>90){
-				taunt = Phrase(OnePhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.One));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(taunt);
 				Recentlycommented.add(event.getNpc().getId());
