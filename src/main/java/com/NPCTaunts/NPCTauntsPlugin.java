@@ -87,133 +87,111 @@ private EventBus eventBus;
 	private boolean prehunleffdeath;
 	private boolean hunleffdeath;
 	private boolean chambersdeath;
-	private boolean pvpdeath;
-	private boolean sarcophagusIsPurple;
-	private boolean purpleIsMine;
-	private boolean Corrupted;
-	private final List<String> HansPhrases = Arrays.asList("You'll get them next time Tiger!","I've seen everyone end up here again, so don't worry","Get back on that unicorn and show them!","Unlucky!","They got lucky","It's okay {Playername}. I'm here for you");
-	private final List<String> HaitusPhrases = Arrays.asList("RIP Bozo","Sit idiot","Get some better gear maybe you'll live longer","Obtain good pleb","Just buy your cape like I did","Im living in your game rent free","AH! You're just fresh out of tutorial island","Been caught lackin","Dying is not very stylish is it?","Pauper Poor Primitive Peasant","Good thing they don't measure fashionscape skill levels for you","If only your list of deaths was a small as your staff","Buy an adamant longer sword, yours is too short","I fart in your general direction","If only your staff was as mighty as mine","{Playername} sucks at staying alive!");
-	private final List<String> KhaledPhrases = Arrays.asList("I call her chandelier","Let's go golfing","Call me a tennis ball.","We ain't stoppin, let's go shoppin.","That's when you know you're the greatest: when you're the greatest, and people still put odds against you." , "I tell myself every day I love my Jacuzzi, I love my marble floors, I love my high ceilings");
-	private final List<String> PriffPhrases = Arrays.asList("Do all humans die this much?","I think that one is special","All that foreign armor doesn't seem to protect them");
-	private final List<String> BankerPhrases = Arrays.asList("Losing the hardcore status: completed","Please stop dying, your bank value can't handle it","Can you ask Death to give us a commission?","Your bank is full of food! Use it!","Next time if you don't respawn on time your bank will be forclosed");
-	private final List<String> SquirePhrases = Arrays.asList("Why do you even respawn here?","You know all the knights make fun of you right?");
-	private final List<String> FeroxPhrases = Arrays.asList("I see {Playername} got PKed","Death is inevitable around here","This isn't good for your KD");
-	private final List<String> WedgePhrases = Arrays.asList("We're gonna be winning, and frankly, we're gonna be tired of winning.","When you get killed they let you do anything. Grab 'em by the hellcat.","Despite all the negative deaths, covfefe","If {Enemyname} weren't my daughter I'd be dating her","{Playername} is gonna build a wall, and make {Enemyname} pay for it.");
-	private final List<String> ElisePhrases = Arrays.asList("Dying is not the vibe, STOP!!!!!!!!!","You loser, RAT!!!");
-	private final List<String> TowncrierPhrases = Arrays.asList("Hear ye, hear ye {Playername} has died to a {Enemyname}!","Listen all a {Enemyname} got the better of {Playername}");
-	private final List<String> PreJadPhrases = Arrays.asList("JalYts! JalYt {Playername} failed the fight caves!","JalYt {Playername} died fighting {Enemyname}!");
-	private final List<String> JadPhrases = Arrays.asList("JalYt {Playername} thought they could take a hit from TzTok-Jad","JalYt {Playername} thought they could outdamage Yt-HurKot","Can someone clean up JalYt {Playername}'s remains? TzTok-Jad made a mess again");
-	private final List<String> PreZukPhrases = Arrays.asList("JalYt {Playername} should avoid taking hits from Jal-Xil's heavy boulders","JalYt {Playername} should avoid taking hits from Jal-Zek's powerful magical abilities","JalYt {Playername} should avoid chasing Jal-Nib","JalYt {Playername} has succumbed to the inferno","Cmon man its easier than the colloseum");
-	private final List<String> ZukPhrases = Arrays.asList("TzKal-Zuk is unbeatable","Was it worth your fire cape?","JalYt {Playername} you must stay behind the shield");
-	//If you die to a rat spider or bat
-	private final List<String> BrynrsbPhrases = Arrays.asList("You died to a {Enemyname}????","How in Seren's name did you die to a {Enemyname}?");
-	//if you die before going to hunleff
-	private final List<String> BrynphPhrases = Arrays.asList("Stay away from the corrupted gauntlet if you can't even make it to Hunleff","Have you considered doing easier content instead?");
-	//if you die during hunleff
-	private final List<String> BrynPhrases = Arrays.asList("Hey everyone {Playername} died so will get some cod!","You need to work on your footwork","Get stomped","Trying running away from the tornadoes","The floor really is lava","Standing still will get you nill","This one would've been the Enhanced weapon seed");
-	private final List<String> ZulPhrases = Arrays.asList("Snake?? SNAKE??? SNAAAAAAAAAAAAAAAAAAKEEE","You have blessed us with a bountiful eel harvest","Zulrah was pleased","Your sacrifice is appreciated","The sacred contract has been fullfilled once again","Zulrah dislikes the taste of your equipment");
-	private final List<String> OlmPhrases = Arrays.asList("No purple for you","If you scuff I will not provide stuff");
-	private final List<String> PreSolPhrases = Arrays.asList("A {Title} has passed away!","{Playername} made it to wave {Wave}","{Mod} was too much for you","Death smiles at us all. All a man can do is smile back","Were you not entertained?","This is FORTIS","Maybe don't select {Mod} next time","Cmon man its easier than inferno","Morituri te salutant");
-	private final List<String> SolPhrases = Arrays.asList("A {Title} was defeated by Sol Heredit!","Sol is known for twisting your knob off","People should know when they are conquered","{Mod} makes Sol stronger");
-	private final List<String> NievePhrases = Arrays.asList("Lol how did you die idiot","You shouldn't die to {Enemyname}. That's such a noob move","Maybe a metal dragon task will make you stronger");
-	private final List<String> StevePhrases = Arrays.asList("I see why Nieve died...","Tureal is stronger than you","Brine rats are a better opponent for you");
+    private boolean pvpdeath;
+    private boolean sarcophagusIsPurple;
+    private boolean purpleIsMine;
+    private boolean Corrupted;
 
-	private final List<String> SixNinePhrases = Arrays.asList("hehe nice");
-	private final List<String> SevenThreePhrases = Arrays.asList("You little ginger prick","Thanks for the zerker ring man");
-	private final List<String> OnePhrases = Arrays.asList("Seriously, you died to a 1? Eat a cabbage next time, then you might survive. Yuck.","Gratz on your Nightmare Mode loss","EAT {Playername}! EAT!");
+    private final List<String> NievePhrases = Arrays.asList("Lol how did you die idiot","You shouldn't die to {Enemyname}. That's such a noob move","Maybe a metal dragon task will make you stronger");
+    private final List<String> StevePhrases = Arrays.asList("I see why Nieve died...","Tureal is stronger than you","Brine rats are a better opponent for you");
 
-	private final List<String> AhrimtPhrases = Arrays.asList("Ahrim away Ahrim away, Ahrim away Ahrim awa...","Pro tip: Only I can eat blighted food outside PvP areas.");
-	private final List<String> KariltPhrases = Arrays.asList("I guess you didn't change your quick prayers to Protect from Missiles?","Haha now I drained your Agility to 0.");
-	private final List<String> DharokPhrases = Arrays.asList("{Lasthit}! That's a good one.","Come back with more HP so I can hit higher.","Did you know I can hit even higher than {Lasthit}?");
-	private final List<String> GuthanPhrases = Arrays.asList("You're weaker than Torag.");
-	private final List<String> ToragtPhrases = Arrays.asList("See? Dual wielding is the future of PKing.","Screw all of your run energy!","I wish they named me Torag the akimbo.","See? Eating glue does make you strong and smart.");
-	private final List<String> VeractPhrases = Arrays.asList("Let me defile your corpse. Fancy some Earl Grey?","Maybe my cousin dung eater would like your corpse.");
-	private final List<String> ScurriPhrases = Arrays.asList("Who's the rat now?","I'm the king of the rats, bow to me.");
-	private final List<String> GiantMPhrases = Arrays.asList("Giant Mole used Dig! It was super effective!","You forgot to sip your prayer potion, didn't ya?");
-	private final List<String> DerangPhrases = Arrays.asList("Plant food!","I stopped one of them but what if more will come now?");
-	private final List<String> SupremePhrases = Arrays.asList("Split I ranged!","You are supreme embarassing.");
-	private final List<String> RexPhrases = Arrays.asList("Split I specced!","Good luck on the run back.","Get Rext!");
-	private final List<String> PrimePhrases = Arrays.asList("Split I TBed!","Guess you are not in your prime.","Turned you into primeordial soup.");
-	private final List<String> SarachPhrases = Arrays.asList("You're about to throw as Hsss'y fit, aren't you?");
-	private final List<String> BloodMPhrases = Arrays.asList("Thanks for the heals.","Upgrade your defenses.");
-	private final List<String> BlueMoPhrases = Arrays.asList("The cold seeps into your bones.","Not even a blue moon will help you beat me.");
-	private final List<String> EclipsPhrases = Arrays.asList("Now you see me, now you don't.","I've eclipsed you.");
-	private final List<String> KalphiPhrases = Arrays.asList("Clearly a skill issue.");
-	private final List<String> KreePhrases = Arrays.asList("Justice has been served.","Your issue is your skill.","Hopefully your death doesn't cause another rodent problem.");
-	private final List<String> CommanPhrases = Arrays.asList("Saradomin has helped you sit.","{Playername} stood against Saradomin and failed.","Saradomin has guided you to your place, 6 feet under.");
-	private final List<String> GeneraPhrases = Arrays.asList("Meat's back on the menu boys.","{Playername} weak like goblin.");
-	private final List<String> KrilPhrases = Arrays.asList("What's the matter you gonna cry?","Your skull shall make a nice goblet.");
-	private final List<String> CorporPhrases = Arrays.asList("Bwaaaaaak bwuk bwuk.","Flee from me, {playername}!","Begone, {playername}!","Bwuk bwuk bwuk.");
-	private final List<String> NexPhrases = Arrays.asList("Next.","Zaros speaks through me, his message: Sit.");
-	private final List<String> ChaosFPhrases = Arrays.asList("Ah there you are squidgy, you were inside their skull all this time.","x n + 1 = r x n ( x n − 1 )");
-	private final List<String> CrazyaPhrases = Arrays.asList("Finally peace.","Doesn't knowledge taste good?");
-	private final List<String> ScorpiPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> KingBlPhrases = Arrays.asList("Say hi to Bob for me","They call me the king. This dragonfire you ain't resisting");
-	private final List<String> ChaosEPhrases = Arrays.asList("Lorem ipsum","{Playername}? {Playername}! {Playername}.","Ad sedes, rattus!.");
-	private final List<String> RevenaPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> CalvarPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> VetioPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> SpindePhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> VenenaPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> ArtioPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> CallisPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
-	private final List<String> ZulrahPhrases = Arrays.asList("Zulratatata.","ssssucker.","You don't need a blowpipe, you blow enough pipe as is.","ssssit.");
-	private final List<String> VorkatPhrases = Arrays.asList("Now let me sleep.","Tell Torfinn to give me half.","The acid reflux is worth it if they die so easily.","Vork you.");
-	private final List<String> PhantoPhrases = Arrays.asList("Get grumbled!","Grumbler wins again.");
-	private final List<String> TheNightPhrases = Arrays.asList("Goodnight!","Sleep well.","Sweet dreams.");
-	private final List<String> PhosanPhrases = Arrays.asList("Goodnight!","Sleep well.","Sweet dreams.","Seems like I'm not just Phosani's nightmare.");
-	private final List<String> DukeSuPhrases = Arrays.asList("*Nom nom*","Food for baron.");
-	private final List<String> TheLevPhrases = Arrays.asList("Pew pew pew.","What's the matter, can't pray switch?");
-	private final List<String> TheWhiPhrases = Arrays.asList("And so another voice joins the Silent Choir.","Your voice will be one of thousands, singing an eternal silence.","Do not be afraid, my child.");
-	private final List<String> VardorPhrases = Arrays.asList("Keep your head in the game.","Don't get ahead of yourself.","You were 2/3 for sure.");
-	private final List<String> OborPhrases = Arrays.asList("Obor smash!");
-	private final List<String> BryophPhrases = Arrays.asList("Go touch grass.");
-	private final List<String> TheMimPhrases = Arrays.asList("Oh no you overdosed on sugar","You got stuck on the sticky","I'll mimic a coffin for you");
-	private final List<String> HesporPhrases = Arrays.asList("I needed 32 hours to grow to become stronger than you. What's your excuse?","Stop using me as a cheap bank, you ungrateful UIM");
-	private final List<String> SkotizPhrases = Arrays.asList("Hopfully I get the 1/65 Lil' {Playername} this kill!","What are the odds to get a Jar of Humanity this kill?");
-	private final List<String> GrotesDuPhrases = Arrays.asList("This is hopeless go to bed");
-	private final List<String> GrotesDaPhrases = Arrays.asList("");
-	private final List<String> AbyssaPhrases = Arrays.asList("Imma firin' mah laz0r!","Sire used Explode! It was super effective!");
-	private final List<String> KrakenPhrases = Arrays.asList("I'm better at splashing than you!","Splish splash!");
-	private final List<String> CerberPhrases = Arrays.asList("Arrooo","Thhhhbt!","Woof woof");
-	private final List<String> ThermoPhrases = Arrays.asList("Now you see me, now you're dead.","You're an inspiration for birth control","Your ass is grass, and I've got the weed whacker","Your face, your ass - what's the difference?");
-	private final List<String> AlchemPhrases = Arrays.asList("Stay hydrated.","Go back to chemistry class.","Tell Konar I said hi.");
-	private final List<String> HunPhrases = Arrays.asList("The only enhanced you'll see is enhanced failure.","You're stuck in this prison with me.","Stick to regular gauntlet.","I don't think perfected armor is even enough for you...");
-	private final List<String> TzTokPhrases = Arrays.asList("No cheese strats for cheese cape.","I gave you plenty of time to react...","Your hands aren't the only thing I can vibrate.");
-	private final List<String> TzKalPhrases = Arrays.asList("lol","git gud","gf","rip bozo","idiot","?");
-	private final List<String> WinterPhrases = Arrays.asList("I pour out this cold for the boys.","Getting interrupted by cold is a skill issue.","Feelin' hot, hot, hot...");
-	private final List<String> ZalcanPhrases = Arrays.asList("Imagine dying to a skilling boss.","Even lvl 3 skillers consider me a 0-damage boss.");
-	private final List<String> TektonPhrases = Arrays.asList("Tekton bonk you!","Tekton win!","Tekton strongest!","Hammertime!");
-	private final List<String> VanguaPhrases = Arrays.asList("You should consider investing in a bulwark.","Triple threat supplies your death.","Go back to school to learn your combat triangle.");
-	private final List<String> VespulPhrases = Arrays.asList("I'll see you vespulater.","You've failed your redemption.");
-	private final List<String> VasaNiPhrases = Arrays.asList("My victory is crystal clear.","I can't hear you with that boulder in your face.");
-	private final List<String> MuttadPhrases = Arrays.asList("*Munch munch munch*","Clearly a skill issue.");
-	private final List<String> GreatOPhrases = Arrays.asList("No purple for you.","If you scuff you will not get stuff.","The only twisted you'll see is me twisting your nuts.","You're lucky to get some pure essence, provided you can actually finish...");
-	private final List<String> TheMaiPhrases = Arrays.asList("Sugadis nuts.","You're a bloody mess.");
-	private final List<String> PestilPhrases = Arrays.asList("You are the weakest link. Goodbye.","Why are you runnning?");
-	private final List<String> NylocaPhrases = Arrays.asList("Switching gear and prayer too hard for you?","Good job on keeping the pillars up and then dying on the easy part");
-	private final List<String> SotetsPhrases = Arrays.asList("Amazing how bad you are.","Looks like you're going to the Shadow realm, {Playername}.");
-	private final List<String> XarpusPhrases = Arrays.asList("Xarpus used counter. It's super effective!","Your painting skills are lacking.");
-	private final List<String> VerzikPhrases = Arrays.asList("I see {Playername} is the least valuable player.","Your fingers are fatter than me.","Stick to entry mode.","Your night at the theater have become your grave at the theater.","The reviews are in, you're cancelled.");
-	private final List<String> AkkhaPhrases = Arrays.asList("Akkhan't with you.","Where's your butterfly now?");
-	private final List<String> BaBaPhrases = Arrays.asList("Cake pop! Boop boop","Ba-ba-Byeeeee","Mind the gap! Your skill gap");
-	private final List<String> KephriPhrases = Arrays.asList("Get pooped on!","Seems like you need this shield more than me.","Don't let it bug you.");
-	private final List<String> ZebakPhrases = Arrays.asList("I'll wave you goodbye!","I wish you died closer now I have to move for my snack.");
-	private final List<String> TumekePhrases = Arrays.asList("ALL YOUR BASE BELONG TO US","EXTERMINATE! EXTERMINATE! EXTERMINATE!","ERROR 404 STRONG OPPONENT NOT FOUND");
-	private final List<String> ElidinPhrases = Arrays.asList("ALL YOUR BASE BELONG TO US","EXTERMINATE! EXTERMINATE! EXTERMINATE!","ERROR 404 STRONG OPPONENT NOT FOUND");
-	private final List<String> GunthoPhrases = Arrays.asList("YAAAAAAAARGH! GUNTHOR STRONG!","BARBARIAN MIGHT SMITES YOU");
+    private final List<String> AhrimtPhrases = Arrays.asList("Ahrim away Ahrim away, Ahrim away Ahrim awa...","Pro tip: Only I can eat blighted food outside PvP areas.");
+    private final List<String> KariltPhrases = Arrays.asList("I guess you didn't change your quick prayers to Protect from Missiles?","Haha now I drained your Agility to 0.");
+    private final List<String> DharokPhrases = Arrays.asList("{Lasthit}! That's a good one.","Come back with more HP so I can hit higher.","Did you know I can hit even higher than {Lasthit}?");
+    private final List<String> GuthanPhrases = Arrays.asList("You're weaker than Torag.");
+    private final List<String> ToragtPhrases = Arrays.asList("See? Dual wielding is the future of PKing.","Screw all of your run energy!","I wish they named me Torag the akimbo.","See? Eating glue does make you strong and smart.");
+    private final List<String> VeractPhrases = Arrays.asList("Let me defile your corpse. Fancy some Earl Grey?","Maybe my cousin dung eater would like your corpse.");
+    private final List<String> ScurriPhrases = Arrays.asList("Who's the rat now?","I'm the king of the rats, bow to me.");
+    private final List<String> GiantMPhrases = Arrays.asList("Giant Mole used Dig! It was super effective!","You forgot to sip your prayer potion, didn't ya?");
+    private final List<String> DerangPhrases = Arrays.asList("Plant food!","I stopped one of them but what if more will come now?");
+    private final List<String> SupremePhrases = Arrays.asList("Split I ranged!","You are supreme embarassing.");
+    private final List<String> RexPhrases = Arrays.asList("Split I specced!","Good luck on the run back.","Get Rext!");
+    private final List<String> PrimePhrases = Arrays.asList("Split I TBed!","Guess you are not in your prime.","Turned you into primeordial soup.");
+    private final List<String> SarachPhrases = Arrays.asList("You're about to throw as Hsss'y fit, aren't you?");
+    private final List<String> BloodMPhrases = Arrays.asList("Thanks for the heals.","Upgrade your defenses.");
+    private final List<String> BlueMoPhrases = Arrays.asList("The cold seeps into your bones.","Not even a blue moon will help you beat me.");
+    private final List<String> EclipsPhrases = Arrays.asList("Now you see me, now you don't.","I've eclipsed you.");
+    private final List<String> KalphiPhrases = Arrays.asList("Clearly a skill issue.");
+    private final List<String> KreePhrases = Arrays.asList("Justice has been served.","Your issue is your skill.","Hopefully your death doesn't cause another rodent problem.");
+    private final List<String> CommanPhrases = Arrays.asList("Saradomin has helped you sit.","{Playername} stood against Saradomin and failed.","Saradomin has guided you to your place, 6 feet under.");
+    private final List<String> GeneraPhrases = Arrays.asList("Meat's back on the menu boys.","{Playername} weak like goblin.");
+    private final List<String> KrilPhrases = Arrays.asList("What's the matter you gonna cry?","Your skull shall make a nice goblet.");
+    private final List<String> CorporPhrases = Arrays.asList("Bwaaaaaak bwuk bwuk.","Flee from me, {playername}!","Begone, {playername}!","Bwuk bwuk bwuk.");
+    private final List<String> NexPhrases = Arrays.asList("Next.","Zaros speaks through me, his message: Sit.");
+    private final List<String> ChaosFPhrases = Arrays.asList("Ah there you are squidgy, you were inside their skull all this time.","x n + 1 = r x n ( x n − 1 )");
+    private final List<String> CrazyaPhrases = Arrays.asList("Finally peace.","Doesn't knowledge taste good?");
+    private final List<String> ScorpiPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> KingBlPhrases = Arrays.asList("Say hi to Bob for me","They call me the king. This dragonfire you ain't resisting");
+    private final List<String> ChaosEPhrases = Arrays.asList("Lorem ipsum","{Playername}? {Playername}! {Playername}.","Ad sedes, rattus!.");
+    private final List<String> RevenaPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> CalvarPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> VetioPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> SpindePhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> VenenaPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> ArtioPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> CallisPhrases = Arrays.asList("Sit rat.","Smited.","Back to lumby.","Stick to F2p nub.","Sit ******* ********.","Cya in Lumby.","L000000000L.","Sit.","Rat.","TY.");
+    private final List<String> ZulrahPhrases = Arrays.asList("Zulratatata.","ssssucker.","You don't need a blowpipe, you blow enough pipe as is.","ssssit.");
+    private final List<String> VorkatPhrases = Arrays.asList("Now let me sleep.","Tell Torfinn to give me half.","The acid reflux is worth it if they die so easily.","Vork you.");
+    private final List<String> PhantoPhrases = Arrays.asList("Get grumbled!","Grumbler wins again.");
+    private final List<String> TheNightPhrases = Arrays.asList("Goodnight!","Sleep well.","Sweet dreams.");
+    private final List<String> PhosanPhrases = Arrays.asList("Goodnight!","Sleep well.","Sweet dreams.","Seems like I'm not just Phosani's nightmare.");
+    private final List<String> DukeSuPhrases = Arrays.asList("*Nom nom*","Food for baron.");
+    private final List<String> TheLevPhrases = Arrays.asList("Pew pew pew.","What's the matter, can't pray switch?");
+    private final List<String> TheWhiPhrases = Arrays.asList("And so another voice joins the Silent Choir.","Your voice will be one of thousands, singing an eternal silence.","Do not be afraid, my child.");
+    private final List<String> VardorPhrases = Arrays.asList("Keep your head in the game.","Don't get ahead of yourself.","You were 2/3 for sure.");
+    private final List<String> OborPhrases = Arrays.asList("Obor smash!");
+    private final List<String> BryophPhrases = Arrays.asList("Go touch grass.");
+    private final List<String> TheMimPhrases = Arrays.asList("Oh no you overdosed on sugar","You got stuck on the sticky","I'll mimic a coffin for you");
+    private final List<String> HesporPhrases = Arrays.asList("I needed 32 hours to grow to become stronger than you. What's your excuse?","Stop using me as a cheap bank, you ungrateful UIM");
+    private final List<String> SkotizPhrases = Arrays.asList("Hopfully I get the 1/65 Lil' {Playername} this kill!","What are the odds to get a Jar of Humanity this kill?");
+    private final List<String> GrotesDuPhrases = Arrays.asList("This is hopeless go to bed");
+    private final List<String> GrotesDaPhrases = Arrays.asList("");
+    private final List<String> AbyssaPhrases = Arrays.asList("Imma firin' mah laz0r!","Sire used Explode! It was super effective!");
+    private final List<String> KrakenPhrases = Arrays.asList("I'm better at splashing than you!","Splish splash!");
+    private final List<String> CerberPhrases = Arrays.asList("Arrooo","Thhhhbt!","Woof woof");
+    private final List<String> ThermoPhrases = Arrays.asList("Now you see me, now you're dead.","You're an inspiration for birth control","Your ass is grass, and I've got the weed whacker","Your face, your ass - what's the difference?");
+    private final List<String> AlchemPhrases = Arrays.asList("Stay hydrated.","Go back to chemistry class.","Tell Konar I said hi.");
+    private final List<String> HunPhrases = Arrays.asList("The only enhanced you'll see is enhanced failure.","You're stuck in this prison with me.","Stick to regular gauntlet.","I don't think perfected armor is even enough for you...");
+    private final List<String> TzTokPhrases = Arrays.asList("No cheese strats for cheese cape.","I gave you plenty of time to react...","Your hands aren't the only thing I can vibrate.");
+    private final List<String> TzKalPhrases = Arrays.asList("lol","git gud","gf","rip bozo","idiot","?");
+    private final List<String> WinterPhrases = Arrays.asList("I pour out this cold for the boys.","Getting interrupted by cold is a skill issue.","Feelin' hot, hot, hot...");
+    private final List<String> ZalcanPhrases = Arrays.asList("Imagine dying to a skilling boss.","Even lvl 3 skillers consider me a 0-damage boss.");
+    private final List<String> TektonPhrases = Arrays.asList("Tekton bonk you!","Tekton win!","Tekton strongest!","Hammertime!");
+    private final List<String> VanguaPhrases = Arrays.asList("You should consider investing in a bulwark.","Triple threat supplies your death.","Go back to school to learn your combat triangle.");
+    private final List<String> VespulPhrases = Arrays.asList("I'll see you vespulater.","You've failed your redemption.");
+    private final List<String> VasaNiPhrases = Arrays.asList("My victory is crystal clear.","I can't hear you with that boulder in your face.");
+    private final List<String> MuttadPhrases = Arrays.asList("*Munch munch munch*","Clearly a skill issue.");
+    private final List<String> GreatOPhrases = Arrays.asList("No purple for you.","If you scuff you will not get stuff.","The only twisted you'll see is me twisting your nuts.","You're lucky to get some pure essence, provided you can actually finish...");
+    private final List<String> TheMaiPhrases = Arrays.asList("Sugadis nuts.","You're a bloody mess.");
+    private final List<String> PestilPhrases = Arrays.asList("You are the weakest link. Goodbye.","Why are you runnning?");
+    private final List<String> NylocaPhrases = Arrays.asList("Switching gear and prayer too hard for you?","Good job on keeping the pillars up and then dying on the easy part");
+    private final List<String> SotetsPhrases = Arrays.asList("Amazing how bad you are.","Looks like you're going to the Shadow realm, {Playername}.");
+    private final List<String> XarpusPhrases = Arrays.asList("Xarpus used counter. It's super effective!","Your painting skills are lacking.");
+    private final List<String> VerzikPhrases = Arrays.asList("I see {Playername} is the least valuable player.","Your fingers are fatter than me.","Stick to entry mode.","Your night at the theater have become your grave at the theater.","The reviews are in, you're cancelled.");
+    private final List<String> AkkhaPhrases = Arrays.asList("Akkhan't with you.","Where's your butterfly now?");
+    private final List<String> BaBaPhrases = Arrays.asList("Cake pop! Boop boop","Ba-ba-Byeeeee","Mind the gap! Your skill gap");
+    private final List<String> KephriPhrases = Arrays.asList("Get pooped on!","Seems like you need this shield more than me.","Don't let it bug you.");
+    private final List<String> ZebakPhrases = Arrays.asList("I'll wave you goodbye!","I wish you died closer now I have to move for my snack.");
+    private final List<String> TumekePhrases = Arrays.asList("ALL YOUR BASE BELONG TO US","EXTERMINATE! EXTERMINATE! EXTERMINATE!","ERROR 404 STRONG OPPONENT NOT FOUND");
+    private final List<String> ElidinPhrases = Arrays.asList("ALL YOUR BASE BELONG TO US","EXTERMINATE! EXTERMINATE! EXTERMINATE!","ERROR 404 STRONG OPPONENT NOT FOUND");
+    private final List<String> GunthoPhrases = Arrays.asList("YAAAAAAAARGH! GUNTHOR STRONG!","BARBARIAN MIGHT SMITES YOU");
 
-	private List<String> PKTaunts= Arrays.asList("Sit rat","Smited","Back to lumby","Stick to F2p nub","Sit ******* ******","Cya in Lumby", "L000000000L","Sit","Rat","TY");
+    private List<String> PKTaunts= Arrays.asList("Sit rat","Smited","Back to lumby","Stick to F2p nub","Sit ******* ******","Cya in Lumby", "L000000000L","Sit","Rat","TY");
 
-	private List<String> BrynnNoUniqPhrases;
-	private List<String> BrynnArmorseedPhrases;
-	private List<String> BrynnWeaponseedPhrases;
-	private List<String> BrynnEnhancedPhrases;
+    private List<String> BrynnNoUniqPhrases;
+    private List<String> BrynnArmorseedPhrases;
+    private List<String> BrynnWeaponseedPhrases;
+    private List<String> BrynnEnhancedPhrases;
 
-	private List<String> OsmuYourPurplePhrases;
-	private List<String> OsmuFriendPurplePhrases;
-	private List<String> OsmuNoPurplePhrases;
+    private List<String> OsmuYourPurplePhrases;
+    private List<String> OsmuFriendPurplePhrases;
+    private List<String> OsmuNoPurplePhrases;
 
+    private List<Integer> Recentlycommented = new ArrayList<>();
+    private List<NPC> SurroundingNPCS = new ArrayList<>();
+    private List<String> DropsReceived = new ArrayList<>();
+    
+    
 	private List<Integer> Recentlycommented = new ArrayList<>();
 	private List<NPC> SurroundingNPCS = new ArrayList<>();
 	private List<String> DropsReceived = new ArrayList<>();
@@ -1059,7 +1037,7 @@ private int Modifierselected =-1;
 		{
 			if (event.getNpc().getName().equals("Hatius Cosaintus"))
 			{
-				taunt = Phrase(KhaledPhrases);
+                taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Khaled));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(taunt);
 			}
@@ -1068,21 +1046,21 @@ private int Modifierselected =-1;
 		if (Recentlycommented.contains(event.getNpc().getId())) { return;}
 		if (event.getNpc().getName().equals("Hans"))
 		{
-			taunt = Phrase(HansPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Hans));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Hatius Cosaintus"))
 		{
-			taunt = Phrase(HaitusPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Haitus));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Vaire"))
 		{
-			taunt = Phrase(PriffPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Priff));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
@@ -1090,7 +1068,7 @@ private int Modifierselected =-1;
 		if (event.getNpc().getName().equals("Banker"))
 		{
 			if ( r.nextInt(100)>30){
-			taunt = Phrase(BankerPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Banker));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			}
@@ -1100,35 +1078,35 @@ private int Modifierselected =-1;
 		}
 		if (event.getNpc().getName().equals("Squire"))
 		{
-			taunt = Phrase(SquirePhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Squire));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Ferox"))
 		{
-			taunt = Phrase(FeroxPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Ferox));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("The 'Wedge'"))
 		{
-			taunt = Phrase(WedgePhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Wedge));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Elise"))
 		{
-			taunt = Phrase(ElisePhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Elise));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
 		}
 		if (event.getNpc().getName().equals("Town Crier"))
 		{
-			taunt = Phrase(TowncrierPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Towncrier));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
@@ -1139,11 +1117,11 @@ private int Modifierselected =-1;
 		{
 			if (prejaddeath)
 			{
-				taunt = Phrase(PreJadPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.PreJad));
 			}
 			else if (jaddeath)
 			{
-				taunt = Phrase(JadPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Jad));
 			}
 			else{
 				return;
@@ -1156,11 +1134,11 @@ private int Modifierselected =-1;
 		{
 			if (prezukdeath)
 			{
-				taunt = Phrase(PreZukPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.PreZuk));
 			}
 			else if (zukdeath)
 			{
-				taunt = Phrase(ZukPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Zuk));
 			}
 			else{
 				return;
@@ -1173,11 +1151,11 @@ private int Modifierselected =-1;
 		{
 			if (presoldeath)
 			{
-				taunt = Phrase(PreSolPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.PreSol));
 			}
 			else if (soldeath)
 			{
-				taunt = Phrase(SolPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Sol));
 			}
 			else{
 				return;
@@ -1191,14 +1169,14 @@ private int Modifierselected =-1;
 		{
 			if (prehunleffminion)
 			{
-				taunt = Phrase(BrynrsbPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Brynrsb));
 			}
 			else if (prehunleffdeath)
 			{
-				taunt = Phrase(BrynphPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Brynph));
 			}
 			else if (hunleffdeath) {
-				taunt = Phrase(BrynPhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Bryn));
 			}
 			else{
 				return;
@@ -1210,7 +1188,7 @@ private int Modifierselected =-1;
 		if (event.getNpc().getName().equals("Priestess Zul-Gwenwynig"))
 		{
 			if (zulrahdeath){
-			taunt = Phrase(ZulPhrases);
+			taunt = Phrase(Arrays.asList(NPCTauntsPhrases.Zul));
 			event.getNpc().setOverheadCycle(300);
 			event.getNpc().setOverheadText(taunt);
 			Recentlycommented.add(event.getNpc().getId());
@@ -1250,7 +1228,7 @@ private int Modifierselected =-1;
 		if (finaldamagetaken == 69)
 		{
 			if ( r.nextInt(100)>50){
-				taunt = Phrase(SixNinePhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.SixNine));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(taunt);
 				Recentlycommented.add(event.getNpc().getId());
@@ -1259,7 +1237,7 @@ private int Modifierselected =-1;
 		if (finaldamagetaken ==73)
 		{
 			if ( r.nextInt(100)>70){
-				taunt = Phrase(SevenThreePhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.SevenThree));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(taunt);
 				Recentlycommented.add(event.getNpc().getId());
@@ -1268,7 +1246,7 @@ private int Modifierselected =-1;
 		if (finaldamagetaken ==1)
 		{
 			if ( r.nextInt(100)>90){
-				taunt = Phrase(OnePhrases);
+				taunt = Phrase(Arrays.asList(NPCTauntsPhrases.One));
 				event.getNpc().setOverheadCycle(300);
 				event.getNpc().setOverheadText(taunt);
 				Recentlycommented.add(event.getNpc().getId());
