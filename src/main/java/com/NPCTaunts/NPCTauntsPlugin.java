@@ -614,7 +614,7 @@ public class NPCTauntsPlugin extends Plugin {
     }
 
     private Color getPublicChatMessageColor() {
-        boolean isChatboxTransparent = client.isResized() && client.getVar(Varbits.TRANSPARENT_CHATBOX) == 1;
+        boolean isChatboxTransparent = client.isResized() && client.getVarbitValue(Varbits.TRANSPARENT_CHATBOX) == 1;
         Color messageColor;
 
 
