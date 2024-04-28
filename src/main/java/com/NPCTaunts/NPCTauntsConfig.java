@@ -15,7 +15,7 @@ public interface NPCTauntsConfig extends Config
 	)
 	default int ForgetTimeDelay()
 	{
-		return 10;
+		return 5;
 	}
 	@ConfigItem(
 			keyName = "Chatmessage",
@@ -50,7 +50,7 @@ public interface NPCTauntsConfig extends Config
 	@ConfigItem(
 			keyName = "PKtaunts",
 			name = "PK taunts",
-			description = "Replaces all taunts with PK taunts",
+			description = "Replaces all boss taunts with PKer taunts",
 			position = 5
 	)
 	default boolean pktaunts()
@@ -70,13 +70,47 @@ public interface NPCTauntsConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "exlusivecustomtaunts",
+			name = "Only custom taunts",
+			description = "Disables the default taunts in the plugin and only uses custom taunts added in the config",
+			position = 7
+	)
+	default boolean exlusivecustomtaunts()
+	{
+		return false;
+	}
+	@ConfigItem(
+			keyName = "custombosstaunts",
+			name = "Custom Boss Taunts",
+			description = "Adds your own taunts to a boss. See readme on how to use",
+			position = 8
+	)
+	default String custombosstaunts()
+	{
+		return "ExactBossname;Custom Taunt 1:Custom Taunt 2\n"+"ExactBossname2;Custom Taunt 3:Custom Taunt 4";
+	}
+	@ConfigItem(
+			keyName = "customnpctaunts",
+			name = "Custom NPC Taunts",
+			description = "Adds your own taunts to a NPC. See readme on how to use",
+			position = 9
+	)
+	default String customnpctaunts()
+	{
+		return "ExactNPCname;Custom Taunt 1:Custom Taunt 2\n"+"ExactNPCname2;Custom Taunt 3:Custom Taunt 4";
+	}
+
+	@ConfigItem(
 			keyName = "texttospeech",
 			name = "Natural Speech TTS",
 			description = "Allows the taunts to trigger the Natural Speech TTS plugin",
-			position = 7
+			position = 10
 	)
 	default boolean texttospeech()
 	{
 		return false;
 	}
+
+
+
 }
