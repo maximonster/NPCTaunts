@@ -30,6 +30,8 @@ import net.runelite.client.ui.JagexColors;
 import net.runelite.client.util.Text;
 import net.runelite.client.config.ChatColorConfig;
 import net.runelite.api.MessageNode;
+import net.runelite.api.events.GameStateChanged;
+
 
 @Slf4j
 @PluginDescriptor(
@@ -106,9 +108,10 @@ public class NPCTauntsPlugin extends Plugin {
 
     @Override
     protected void shutDown() throws Exception {
-        Died = false;
+        Forget();
         Modifierselected = -1;
-        Recentlycommented.clear();
+        colotitle = "";
+        wave = 0;
         log.info("NPC Taunts stopped!");
     }
 
@@ -175,12 +178,7 @@ public class NPCTauntsPlugin extends Plugin {
             return;
         }
         if (Instant.now().compareTo(ForgetTime) >= 0) {
-            Died = false;
-            Recentlycommented.clear();
-            lastOpponent = null;
-            Killer = null;
-            lastdamagetaken = 0;
-            finaldamagetaken = 0;
+            Forget();
         }
     }
 
@@ -562,6 +560,14 @@ public class NPCTauntsPlugin extends Plugin {
         }
     }
 
+    @Subscribe
+    public void onGameStateChanged(GameStateChanged gameStateChanged) {
+        //Forget on logout
+        if (gameStateChanged.getGameState().getState() < GameState.LOADING.getState()) {
+            Forget();
+        }
+    }
+
     @Provides
     NPCTauntsConfig provideConfig(ConfigManager configManager) {
         return configManager.getConfig(NPCTauntsConfig.class);
@@ -668,6 +674,14 @@ public class NPCTauntsPlugin extends Plugin {
         }
     }
 
+    private void Forget() {
+        Died = false;
+        Recentlycommented.clear();
+        lastOpponent = null;
+        Killer = null;
+        lastdamagetaken = 0;
+        finaldamagetaken = 0;
+    }
 
 }
 
