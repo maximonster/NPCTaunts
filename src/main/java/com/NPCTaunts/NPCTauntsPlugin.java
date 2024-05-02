@@ -488,7 +488,7 @@ public class NPCTauntsPlugin extends Plugin {
         String taunt = null;
 
         if (Died == false) {
-            if (event.getNpc().getName().equals("Hatius Cosaintus")) {
+            if (event.getNpc().getName().equals("Hatius Cosaintus")&& (config.ShutHaitus()==false)) {
                 taunt(event.getNpc(), Phrase(Arrays.asList(NPCTauntsPhrases.Khaled)));
             }
             return;

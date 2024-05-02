@@ -68,12 +68,22 @@ public interface NPCTauntsConfig extends Config
 	{
 		return false;
 	}
+	@ConfigItem(
+			keyName = "ShutUpHaitus",
+			name = "Shut up Haitus",
+			description = "Shuts Haitus up outside of death",
+			position = 7
+	)
+	default boolean ShutHaitus()
+	{
+		return false;
+	}
 
 	@ConfigItem(
 			keyName = "exlusivecustomtaunts",
 			name = "Only custom taunts",
 			description = "Disables the default taunts in the plugin and only uses custom taunts added in the config",
-			position = 7
+			position = 8
 	)
 	default boolean exlusivecustomtaunts()
 	{
@@ -83,7 +93,7 @@ public interface NPCTauntsConfig extends Config
 			keyName = "custombosstaunts",
 			name = "Custom Boss Taunts",
 			description = "Adds your own taunts to a boss. See readme on how to use",
-			position = 8
+			position = 9
 	)
 	default String custombosstaunts()
 	{
@@ -93,7 +103,7 @@ public interface NPCTauntsConfig extends Config
 			keyName = "customnpctaunts",
 			name = "Custom NPC Taunts",
 			description = "Adds your own taunts to a NPC. See readme on how to use",
-			position = 9
+			position = 10
 	)
 	default String customnpctaunts()
 	{
@@ -104,7 +114,7 @@ public interface NPCTauntsConfig extends Config
 			keyName = "texttospeech",
 			name = "Natural Speech TTS",
 			description = "Allows the taunts to trigger the Natural Speech TTS plugin",
-			position = 10
+			position = 11
 	)
 	default boolean texttospeech()
 	{
